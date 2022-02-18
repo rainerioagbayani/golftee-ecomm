@@ -21,7 +21,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # PAYPAL KEYS
 PAYPAL_API_USERNAME = os.environ['PAYPAL_API_USERNAME']
@@ -223,9 +223,6 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
 OSCAR_MISSING_IMAGE_URL = MEDIA_URL + 'image_not_found.jpg'
 
 HAYSTACK_CONNECTIONS = {
