@@ -1,5 +1,6 @@
 import os
 from oscar.defaults import *
+import django_heroku
 
 # Path helper
 location = lambda x: os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', x)
@@ -21,14 +22,9 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-# PAYPAL KEYS
-PAYPAL_API_USERNAME = os.environ['PAYPAL_API_USERNAME']
-PAYPAL_API_PASSWORD = os.environ['PAYPAL_API_PASSWORD']
-PAYPAL_API_SIGNATURE = os.environ['PAYPAL_API_SIGNATURE']
-
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'golftee-ecomm.herokuapp.com/']
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
