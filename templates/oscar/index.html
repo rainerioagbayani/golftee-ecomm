@@ -1,0 +1,236 @@
+{% extends 'oscar/layout.html' %}
+
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static "oscar/css/styles.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "oscar/css/icomoon.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "oscar/img/golftee" %}" />
+{% endblock %}
+
+{% block layout %}
+    {# Top-horizontal bar with account, notifictions, dashboard links #}
+    {% include "oscar/partials/nav_accounts.html" %}
+
+    {# Site logo/title, mini-basket, browse dropdown and searchbox #}
+    <header class="header container">
+        {% block navigation %}
+            {% include "oscar/partials/nav_primary.html" %}
+        {% endblock %}
+    </header>
+
+    {# Main content of page - other layout templates may override this block #}
+    {% block content_wrapper %}
+    <!-- Jumbotron -->
+    <div class="p-5 text-center bg-image rounded-3" style="
+background-image: url('https://cdn11.bigcommerce.com/s-1swpmfwl3m/images/stencil/1700w/carousel/32/banner_01.png?c=1');
+height: 400px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+object-fit: scale-down; 
+max-width: 100%;">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+                <h1 class="mb-3">AFFORDABLE GOLF TEES FOR SALE</h1>
+                <h4 class="mb-3">Fast Shipping</h4>
+                <a class="btn btn-outline-light btn-lg" href="{{ homepage_url }}" role="button">Shop now</a>
+            </div>
+        </div>
+    </div>
+   
+    
+        <!-- Featured Product-->
+        <div class="jumbotron information-layout jumbotron-fluid" style="margin: 0px; background-color: rgb(255,255,255);">
+            <div class="container">
+                <!-- Main section-->
+                <div class="row">
+                    <div class="col-md text-center">
+                    <h3 style=" font-size: 36px;
+                    font-weight: 800;
+                    color: #1f2937;">Featured Products</h3>
+                </div>
+                </div>
+                <br>
+                <br>
+                <div class="row featured__filter">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg">
+                            <figure class="figure" style="font-size: 18px; color: #e5e7eb;">
+                                <img src="https://pyxis.nymag.com/v1/imgs/8f8/e12/51b54d13d65d8ee3773ce32da03e1fa220-dogecoin.rsquare.w1200.jpg" class="figure-img img-fluid rounded" alt="Doge coin">
+                                </figure>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Crab Pool Security</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg">
+                            <figure class="figure" style="font-size: 18px; color: #e5e7eb;">
+                                <img src="https://pyxis.nymag.com/v1/imgs/8f8/e12/51b54d13d65d8ee3773ce32da03e1fa220-dogecoin.rsquare.w1200.jpg" class="figure-img img-fluid rounded" alt="Doge coin">
+                                </figure>
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Crab Pool Security</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg">
+                            <figure class="figure" style="font-size: 18px; color: #e5e7eb;">
+                                <img src="https://pyxis.nymag.com/v1/imgs/8f8/e12/51b54d13d65d8ee3773ce32da03e1fa220-dogecoin.rsquare.w1200.jpg" class="figure-img img-fluid rounded" alt="Doge coin">
+                                </figure>
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Crab Pool Security</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg">
+                            <figure class="figure" style="font-size: 18px; color: #e5e7eb;">
+                                <img src="https://pyxis.nymag.com/v1/imgs/8f8/e12/51b54d13d65d8ee3773ce32da03e1fa220-dogecoin.rsquare.w1200.jpg" class="figure-img img-fluid rounded" alt="Doge coin">
+                                </figure>
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">Crab Pool Security</a></h6>
+                            <h5>$30.00</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Popular Section -->
+    <div class="jumbotron information-layout jumbotron-fluid" style="margin: 0px; background-color: rgb(255,255,255);">
+        <div class="container">
+            <!-- Main section-->
+            <div class="row">
+                <div class="col-md text-center">
+                <h3 style=" font-size: 36px;
+                font-weight: 800;
+                color: #1f2937;">Popular</h3>
+            </div>
+            </div>
+            <br>
+            <br>
+            <div class="row featured__filter">
+            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg">
+                        <figure class="figure" style="font-size: 18px; color: #e5e7eb;">
+                            <img src="https://pyxis.nymag.com/v1/imgs/8f8/e12/51b54d13d65d8ee3773ce32da03e1fa220-dogecoin.rsquare.w1200.jpg" class="figure-img img-fluid rounded" alt="Doge coin">
+                            </figure>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Crab Pool Security</a></h6>
+                        <h5>$30.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg">
+                        <figure class="figure" style="font-size: 18px; color: #e5e7eb;">
+                            <img src="https://pyxis.nymag.com/v1/imgs/8f8/e12/51b54d13d65d8ee3773ce32da03e1fa220-dogecoin.rsquare.w1200.jpg" class="figure-img img-fluid rounded" alt="Doge coin">
+                            </figure>
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Crab Pool Security</a></h6>
+                        <h5>$30.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg">
+                        <figure class="figure" style="font-size: 18px; color: #e5e7eb;">
+                            <img src="https://pyxis.nymag.com/v1/imgs/8f8/e12/51b54d13d65d8ee3773ce32da03e1fa220-dogecoin.rsquare.w1200.jpg" class="figure-img img-fluid rounded" alt="Doge coin">
+                            </figure>
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Crab Pool Security</a></h6>
+                        <h5>$30.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg">
+                        <figure class="figure" style="font-size: 18px; color: #e5e7eb;">
+                            <img src="https://pyxis.nymag.com/v1/imgs/8f8/e12/51b54d13d65d8ee3773ce32da03e1fa220-dogecoin.rsquare.w1200.jpg" class="figure-img img-fluid rounded" alt="Doge coin">
+                            </figure>
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Crab Pool Security</a></h6>
+                        <h5>$30.00</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                
+        
+{% endblock %}
+
+{% include "oscar/partials/footer.html" %}
+{% endblock %}
+
+{# Local scripts #}
+{% block scripts %}
+    {{ block.super }}
+    <!-- Twitter Bootstrap -->
+    <script src="{% static "oscar/js/bootstrap4/bootstrap.bundle.min.js" %}"></script>
+    <!-- Oscar -->
+    <script src="{% static "oscar/js/oscar/ui.js" %}"></script>
+{% endblock %}
+
+{% block extrascripts %}
+    {% include "oscar/partials/extrascripts.html" %}
+    {{ block.super }}
+{% endblock %}
+
+{% block onbodyload %}
+    {{ block.super }}
+    oscar.init();
+{% endblock %}

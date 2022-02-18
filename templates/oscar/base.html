@@ -1,0 +1,15 @@
+{% extends 'oscar/base.html' %}
+
+{% load i18n %}
+
+{% load static %}
+
+<!-- Title -->
+{% block title %}
+    {% trans 'GolfTee' %} 
+{% endblock %}
+
+<!-- Logo -->
+{% block favicon %}
+    <link rel="shortcut icon" href="{% static "oscar/img/logo.png" %}"/>
+{% endblock %}

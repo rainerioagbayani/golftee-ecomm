@@ -1,0 +1,12 @@
+{% load i18n %}
+
+<form action="{% url 'search:search' %}"  method="GET" class="form-inline my-2 my-lg-0 ml-auto">
+    <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+      <div class="input-group">
+        <input type="search" placeholder="Search store" aria-describedby="button-addon1" class="form-control border-0 bg-light" name="q" class="form-control mr-sm-2" >
+        <div class="input-group-append">
+          <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+</form>
