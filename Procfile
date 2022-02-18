@@ -1,1 +1,1 @@
-"web: gunicorn golf_tee.wsgi" 
+web: gunicorn golf_tee.wsgi
