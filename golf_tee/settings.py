@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.flatpages',
     'whitenoise.runserver_nostatic',
+    #'oscar_accounts.apps.AccountsConfig',
+    #'oscar_accounts.dashboard.apps.AccountsDashboardConfig',
 
     'oscar.config.Shop',
     'oscar.apps.analytics.apps.AnalyticsConfig',

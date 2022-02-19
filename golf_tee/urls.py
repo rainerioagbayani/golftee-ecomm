@@ -15,6 +15,9 @@ urlpatterns = [
     # Nonetheless, it's often useful for debugging.
 
     path('', IndexView.as_view(), name='index'),
+    
+    # django-oscar-accounts https://github.com/django-oscar/django-oscar-accounts
+    #path('dashboard/accounts/', apps.get_app_config('accounts_dashboard').urls),
 
     # Paypal
     path(r'^checkout/paypal/', include('paypal.express.urls')),
