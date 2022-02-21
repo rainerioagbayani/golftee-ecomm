@@ -1,4 +1,5 @@
 import os
+from pickle import FALSE
 from oscar.defaults import *
 import django_heroku
 
@@ -20,15 +21,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # PAYPAL ENV
+PAYPAL_SANDBOX_MODE = True
+
 PAYPAL_API_USERNAME = os.environ['PAYPAL_API_USERNAME']
 
 PAYPAL_API_PASSWORD = os.environ['PAYPAL_API_PASSWORD']
 
 PAYPAL_API_SIGNATURE = os.environ['PAYPAL_API_SIGNATURE']
 
+PAYPAL_CLIENT_ID = os.environ["PAYPAL_CLIENT_ID"]
+
+PAYPAL_CLIENT_SECRET = os.environ["PAYPAL_CLIENT_SECRET"]
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
@@ -54,7 +61,7 @@ INSTALLED_APPS = [
 
     'oscar.config.Shop',
     'oscar.apps.analytics.apps.AnalyticsConfig',
-    'oscar.apps.checkout.apps.CheckoutConfig',
+    'apps.checkout.apps.CheckoutConfig',
     'oscar.apps.address.apps.AddressConfig',
     'oscar.apps.shipping.apps.ShippingConfig',
     'oscar.apps.catalogue.apps.CatalogueConfig',
