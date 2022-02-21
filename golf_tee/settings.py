@@ -48,10 +48,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.auth',
     'django.contrib.sessions',
+    'django.contrib.admin',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
