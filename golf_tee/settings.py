@@ -3,6 +3,7 @@ from pickle import FALSE
 from oscar.defaults import *
 import django_heroku
 
+
 # Path helper
 location = lambda x: os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', x)
 
@@ -261,3 +262,4 @@ HAYSTACK_CONNECTIONS = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+django_heroku.settings(locals())
