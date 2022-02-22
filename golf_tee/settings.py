@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # PAYPAL ENV
-PAYPAL_SANDBOX_MODE = False
+PAYPAL_SANDBOX_MODE = True
 
 PAYPAL_API_USERNAME = os.environ['PAYPAL_API_USERNAME']
 
